@@ -5,6 +5,10 @@ image: /root/.oldroot/nfs/install/../images/Ubuntu-1804-bionic-64-minimal.tar.gz
 # Usually you don't need to change this
 bootloader: grub
 
+# Needed to run Docker on XFS; disable setting to false
+# HACK https://github.com/hetzneronline/installimage/pull/8
+xfs_options: "-n ftype=1"
+
 # By default, enable a RAID 0 (a.k.a. no RAID)
 swraid: 1
 swraid_level: 0
