@@ -1,0 +1,14 @@
+galaxy_info:
+  role_name: hetzner_rescue_installimage
+  author: Jairo Llopis
+  description: Autoinstall server with Hetzner rescue system
+  company: Tecnativa
+  license: Apache
+  min_ansible_version: 2.6
+  platforms:
+    - name: Ubuntu
+      versions:
+        - 18.04
+  galaxy_tags:
+    - hetzner
+    - install

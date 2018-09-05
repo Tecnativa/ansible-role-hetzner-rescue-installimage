@@ -1,0 +1,30 @@
+# In this weird path you can find official images, but you can use
+# a remote one with http://whatever.tbz2 and similar
+image: /root/.oldroot/nfs/install/../images/Ubuntu-1804-bionic-64-minimal.tar.gz
+
+# Usually you don't need to change this
+bootloader: grub
+
+# By default, enable a RAID 0 (a.k.a. no RAID)
+swraid: 1
+swraid_level: 0
+
+# Partition table definition
+partitions:
+  - mountpoint: /boot
+    filesystem: ext4
+    size: 2G
+  - mountpoint: lvm # Special value to use LVM
+    filesystem: vg-main # In this case, LVM volume group name
+    size: all # Will take all remaining space
+logical_volumes:
+  - vg: vg-main
+    name: swap
+    mountpoint: swap
+    filesystem: swap
+    size: "{{ ansible_memtotal_mb }}"
+  - vg: vg-main
+    name: root
+    mountpoint: /
+    filesystem: xfs
+    size: all

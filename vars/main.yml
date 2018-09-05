@@ -1,0 +1,5 @@
+# Connect via port 22 always
+ansible_port: 22
+
+# Recovery image has python 3.5, too old for Ansible; use python 2
+ansible_python_interpreter: python2

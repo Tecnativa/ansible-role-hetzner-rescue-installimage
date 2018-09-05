@@ -1,0 +1,11 @@
+- name: configure installation
+  template:
+    src: autosetup.j2
+    dest: /autosetup
+
+- name: install image
+  command: /root/.oldroot/nfs/install/installimage
+
+- name: reboot into normal mode
+  command: reboot
+  ignore_errors: true
