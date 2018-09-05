@@ -8,7 +8,7 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - 18.04
+        - bionic
   galaxy_tags:
     - hetzner
     - install
