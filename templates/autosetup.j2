@@ -3,7 +3,7 @@ BOOTLOADER {{ bootloader }}
 HOSTNAME {{ inventory_hostname_short }}
 
 # Hard disk drives to wipe and use
-{% for device in ansible_devices if device.startswith("sd") -%}
+{% for device in ansible_devices if device.startswith("sd") or device.startswith("nvme") -%}
   DRIVE{{ loop.index }} /dev/{{ device }}
 {% endfor %}
 
