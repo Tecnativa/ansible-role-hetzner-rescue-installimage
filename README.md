@@ -1,5 +1,8 @@
 # Hetzner Rescue Installimage
 
+[![GitHub license](https://img.shields.io/github/license/Tecnativa/ansible-role-hetzner-rescue-installimage.svg)](https://github.com/Tecnativa/ansible-role-hetzner-rescue-installimage/blob/master/LICENSE)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-tecnativa.hetzner_rescue_installimage-blue.svg)][galaxy]
+
 Install your new Docker servers automatically in minutes
 
 ## Requirements
@@ -27,7 +30,7 @@ Let's call it `hetzner-install.yml`:
 ```yaml
 - hosts: "{{ target }}"
   roles:
-    - role: yajo.hetzner_rescue_installimage
+    - role: tecnativa.hetzner_rescue_installimage
       vars:
         # Disable SSH checking, it's mostly useless in this role's use case;
         # not done automatically because of the obvious insecurity
