@@ -7,7 +7,7 @@ HOSTNAME {{ inventory_hostname_short }}
   DRIVE{{ loop.index }} /dev/{{ device }}
 {% endfor %}
 
-# No RAID, Ceph will do the dirty work
+# RAID configuration
 SWRAID {{ swraid }}
 SWRAIDLEVEL {{ swraid_level }}
 

@@ -9,9 +9,9 @@ bootloader: grub
 # HACK https://github.com/hetzneronline/installimage/pull/8
 xfs_options: "-n ftype=1"
 
-# By default, enable a RAID 0 (a.k.a. no RAID)
+# By default, enable a RAID 1 (a.k.a. mirroring)
 swraid: 1
-swraid_level: 0
+swraid_level: 1
 
 # Partition table definition
 partitions:
