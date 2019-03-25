@@ -18,3 +18,5 @@
 - name: reboot into normal mode
   command: reboot
   ignore_errors: true
+  when: reboot_postinstall
+
