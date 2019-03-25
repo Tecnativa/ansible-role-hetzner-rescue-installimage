@@ -12,6 +12,10 @@ reboot_postinstall: true
 # Usually you don't need to change this
 bootloader: grub
 
+# You can change this to an URL to automatically add authorized keys
+# to the root user of the installed system
+sshkey_url: false
+
 # Needed to run Docker on XFS; disable setting to false
 # HACK https://github.com/hetzneronline/installimage/pull/8
 xfs_options: "-n ftype=1"
