@@ -1,6 +1,6 @@
 IMAGE {{ image }}
 BOOTLOADER {{ bootloader }}
-HOSTNAME {{ inventory_hostname_short }}
+HOSTNAME {{ hostname }}
 
 # Hard disk drives to wipe and use
 {% for device in ansible_devices if device.startswith("sd") or device.startswith("nvme") -%}
