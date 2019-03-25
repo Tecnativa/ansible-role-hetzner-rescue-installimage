@@ -1,3 +1,6 @@
+# Test how this is referenced...
+hostname: inventory_hostname_short
+
 # In this weird path you can find official images, but you can use
 # a remote one with http://whatever.tbz2 and similar
 image: /root/.oldroot/nfs/install/../images/Ubuntu-1804-bionic-64-minimal.tar.gz
