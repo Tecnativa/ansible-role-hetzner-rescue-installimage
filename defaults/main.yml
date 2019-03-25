@@ -2,6 +2,10 @@
 # a remote one with http://whatever.tbz2 and similar
 image: /root/.oldroot/nfs/install/../images/Ubuntu-1804-bionic-64-minimal.tar.gz
 
+# Automatically reboot after installation?
+# You can disable this if you want to run more commands prior to rebooting.
+reboot_postinstall: false
+
 # Usually you don't need to change this
 bootloader: grub
 
