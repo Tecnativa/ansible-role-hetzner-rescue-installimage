@@ -67,5 +67,5 @@ This project is maintained by:
 development, installation, maintenance and hosting services.
 
 [defaults]: https://github.com/Tecnativa/ansible-role-hetzner-rescue-installimage/tree/master/defaults/main.yml
-[galaxy]: https://galaxy.ansible.com/yajo/hetzner_rescue_installimage
+[galaxy]: https://galaxy.ansible.com/tecnativa/hetzner_rescue_installimage
 [Tecnativa]: https://www.tecnativa.com
