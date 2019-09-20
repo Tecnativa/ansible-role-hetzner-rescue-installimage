@@ -3,7 +3,7 @@ hostname: "{{ inventory_hostname_short }}"
 
 # In this weird path you can find official images, but you can use
 # a remote one with http://whatever.tbz2 and similar
-image: /root/.oldroot/nfs/install/../images/Ubuntu-1804-bionic-64-minimal.tar.gz
+image: /root/.oldroot/nfs/images/Ubuntu-1804-bionic-64-minimal.tar.gz
 
 # Automatically reboot after installation?
 # You can disable this if you want to run more commands prior to rebooting.
@@ -15,10 +15,6 @@ bootloader: grub
 # You can change this to an URL to automatically add authorized keys
 # to the root user of the installed system
 sshkey_url: false
-
-# Needed to run Docker on XFS; disable setting to false
-# HACK https://github.com/hetzneronline/installimage/pull/8
-xfs_options: "-n ftype=1"
 
 # By default, enable a RAID 1 (a.k.a. mirroring)
 swraid: 1

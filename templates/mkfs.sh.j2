@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-if [ "$1 $2" == "-t xfs" ]; then
-  # See https://stackoverflow.com/a/4827707/1468388
-  set -- "${@:1:2}" {{ xfs_options }} "${@:4}"
-fi
-
-exec /sbin/mkfs "$@"

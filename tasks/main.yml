@@ -3,20 +3,12 @@
     src: autosetup.j2
     dest: /autosetup
 
-# HACK https://github.com/hetzneronline/installimage/pull/8
-- name: add xfs options mock
-  template:
-    dest: /usr/local/sbin/mkfs
-    mode: a=rx,u+w
-    src: mkfs.sh.j2
-  when:
-    - xfs_options is string
-
 - name: install image
   command: /root/.oldroot/nfs/install/installimage
 
 - name: reboot into normal mode
-  command: reboot
+  reboot:
+    reboot_timeout: 10
   ignore_errors: true
   when: reboot_postinstall
 
